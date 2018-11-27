@@ -114,6 +114,9 @@ h2 {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
       grid-template-areas: "_child_card _basic_sport" "_full_immertion _aqua_yoga";
+  -ms-grid-rows: 516px auto;
+      grid-template-rows: 516px auto;
+  grid-auto-rows: 258px;
   grid-column-gap: 0px;
   /*.card*/
 }
@@ -142,10 +145,6 @@ h2 {
   grid-area: _aqua_yoga;
 }
 
-.wrapper .all_cards .size1 {
-  height: 516px;
-}
-
 .wrapper .all_cards .size1 h2 {
   font-size: 54px;
   margin: 20px 0 21px -3px;
@@ -155,11 +154,6 @@ h2 {
 
 .wrapper .all_cards .size1 .card_content {
   height: 417px;
-  margin: 60px 68px 38px 67px;
-}
-
-.wrapper .all_cards .size2 {
-  height: 258px;
 }
 
 .wrapper .all_cards .size2 h2 {
