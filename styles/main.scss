@@ -90,11 +90,26 @@ h2 {
     
     .all_cards {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "_child_card _basic_sport"
+                            "_full_immertion _aqua_yoga";
+        grid-column-gap: 0px;
+
+        &:nth-child(1) {
+            grid-area: _child_card;
+        }
+        &:nth-child(2) {
+            grid-area: _basic_sport;
+        }
+        &:nth-child(3) {
+            grid-area: _full_immertion;
+        }
+        &:nth-child(4) {
+            grid-area: _aqua_yoga;
+        }
 
         .size1 {
-            width: 50%;
             height: 516px;
 
             h2 {
@@ -111,7 +126,6 @@ h2 {
         }
 
         .size2 {
-            width: 50%;
             height: 258px;
 
             h2 {
@@ -270,6 +284,7 @@ h2 {
 
         .child_card {
             background-image: url("../images/child_card.jpg");
+            // grid-area: _child_card;
 
             .card_name, &.card::before {
                 background-color: #058cff;
@@ -278,6 +293,7 @@ h2 {
         
         .basic_sport {
             background-image: url("../images/ball1.jpg");
+            // grid-area: _basic_sport;
         
             .card_name,  &.card::before {
                 background-color: #db28b3;
@@ -286,6 +302,7 @@ h2 {
         
         .full_immertion {
             background-image: url("..//images/full_immertion.jpg");
+            // grid-area: _full_immertion;
         
             .card_name,  &.card::before {
                 background-color: #02828f;
@@ -294,6 +311,7 @@ h2 {
         
         .aqua_yoga {
             background-image: url("..//images/yoga3_cut.png");
+            // grid-area: _aqua_yoga;
         
             &, h2 {
                 color: #5e6a75;

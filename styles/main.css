@@ -109,16 +109,40 @@ h2 {
 
 .wrapper .all_cards {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "_child_card _basic_sport" "_full_immertion _aqua_yoga";
+  grid-column-gap: 0px;
   /*.card*/
 }
 
+.wrapper .all_cards:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: _child_card;
+}
+
+.wrapper .all_cards:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: _basic_sport;
+}
+
+.wrapper .all_cards:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: _full_immertion;
+}
+
+.wrapper .all_cards:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: _aqua_yoga;
+}
+
 .wrapper .all_cards .size1 {
-  width: 50%;
   height: 516px;
 }
 
@@ -135,7 +159,6 @@ h2 {
 }
 
 .wrapper .all_cards .size2 {
-  width: 50%;
   height: 258px;
 }
 
