@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,700&subset=cyrillic');
+
+* {
+    box-sizing: border-box;
+}
+
+header a { 
+    text-decoration: none;
+}
+h2 {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -3.2px;
+    line-height: 1.2;
+}
+.text_upper {
+    text-transform: uppercase;
+}
+.btn {
+    height: 52px;
+    position: absolute;
+    /*for gradient border around the button*/
+    background: linear-gradient(#489fdb, #5f84be);
+    padding: 1px;
+    border-radius: 7px;
+}
+.btn img {
+    height: 30px;
+}
+.btn button {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#3bb1e0, #3a85bd);
+    border: none;
+    border-radius: 6px;
+    position: relative;
+    z-index: 230;
+}
+.btn button span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    position: relative;
+    z-index: 250;
+}
+.btn.buy button span::before {
+    display: inline-block;
+    content: url(../images/shopping-cart.svg);
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -8px;
+    top: 2px;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    color: #fefefe;
+    font-family: "Open Sans", sans-serif;
+
+    header {
+        height: 79px;
+        width: 100%;
+
+        .content {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            width: 1126px;
+            margin-left: 88px;
+
+            .menu {
+                display: flex; /*for  а -- height=100%*/
+                justify-content: space-between;
+                width: 680px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    color: #aab1b5;
+                    font-family: "Open Sans", sans-serif;
+                    letter-spacing: -1px;
+                    border-bottom: solid 4px rgba(252, 214, 51, 0);
+
+                    &:hover {
+                        color: #858888;
+                        border-bottom: solid 4px rgba(252, 214, 51, 1);
+                    }
+                }   
+            }
+        }
+    }
+    
+    .all_cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .size1 {
+            width: 50%;
+            height: 516px;
+        }
+        .size2 {
+            width: 50%;
+            height: 258px;
+        }
+        .size3 {
+            width: 28%;
+            min-height: 124px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            font-family: "Open Sans", sans-serif;
+            color: #fefefe;
+            background-size: cover;
+            position: relative;
+            z-index: 20;
+
+            /*background darkening of card */
+            &::before {
+                width: 100%;
+                height: 100%;
+                display: block;
+                content: " ";
+                opacity: 0.5;
+                position: absolute;
+                top: 0px;
+                z-index: 40;
+            }
+        }
+        
+        
+        .card_content {
+            position: relative;
+            z-index: 80;
+        }
+        .size1 .card_content {
+            height: 417px;
+            margin: 60px 68px 38px 67px;
+        }
+        .size2 .card_content {
+            height: 200px;
+            margin: 33px 68px 24px 67px;
+        }
+        .child_card {
+            background-image: url("../images/child_card.jpg");
+        }
+        .child_card .card_name, .child_card.card::before {
+            background-color: #058cff;
+        }
+        .basic_sport {
+            background-image: url("../images/ball1.jpg");
+        }
+        .basic_sport .card_name,  .basic_sport.card::before {
+            background-color: #db28b3;
+        }
+        .full_immertion {
+            background-image: url("..//images/full_immertion.jpg");
+        }
+        .full_immertion .card_name,  .full_immertion.card::before {
+            background-color: #02828f;
+        }
+        .aqua_yoga {
+            background-image: url("..//images/yoga3_cut.png");
+        }
+        .aqua_yoga, .aqua_yoga h2 {
+            color: #5e6a75;
+        }
+        .aqua_yoga .card_name,  .aqua_yoga.card::before {
+            background-color: #ffffff;
+        }
+        
+        /*info*/
+        
+        .info {
+            width: 360px;
+
+            .card_name {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1.8;
+                letter-spacing: -1.8px;
+                word-spacing: 9px;
+                text-align: center;
+                height: 31px;    
+                border-radius: 4px;
+                display: inline-flex;
+
+                &>span {
+                    padding: 0 12px 0 12px;
+                }
+                .lett_spase0 {
+                    letter-spacing: 0;
+                }
+            }
+            
+        }
+
+        
+
+        .size1 h2 {
+            font-size: 54px;
+            margin: 20px 0 21px -3px;
+            padding-right: 126px;
+            height: 130px;
+        }
+        .size2 h2 {
+            margin: 14px 0 0 -3px;
+            padding-right: 0;
+            height: 50px;
+        }
+        .card_description {
+            font-size: 19px;
+            font-weight: 300;
+            letter-spacing: -2.1px;
+            line-height: 1.25;
+            padding-right: 126px;
+        }
+        .size2 .card_description {
+            margin-top: 10px;
+            padding-right: 66px;
+        }
+        
+        /*button BUY*/
+        .all_cards .btn {
+            width: 119px;
+            top: 0px;
+            right: 21px;
+        }
+        .all_cards .btn::after {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #489fdb, #5f84be);
+            border-radius: 6px;
+            box-sizing: border-box;
+            display: block;
+            content: " ";
+            position: absolute;
+            transform: rotate(45deg);
+            top: 6px;
+            right: -15px;
+            z-index: 150;
+        }
+        .all_cards .btn button::after {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #3bb1e0, #3a85bd);
+            border-radius: 5px;
+            display: block;
+            content: " ";
+            position: absolute;
+            transform: rotate(45deg);
+            top: 6px;
+            right: -15px;
+            z-index: 200;
+        }
+        .all_cards .btn button span {
+            padding-left: 15px;
+        }
+        
+        /*price*/
+        .card_price {
+            width: 108px;
+            height: 32px;
+            background: #f5c600;
+            text-align: center;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            z-index: 50;
+        }
+        .card_price span {
+            font-weight: 700;
+            font-size: 26px;
+            letter-spacing: 1.8px;
+            color: #545628;
+        }
+    }
+}
+
+
